@@ -2,16 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using JetBrains.Annotations;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class MovPersonaje : MonoBehaviour
 {
 
-    public float multiplicadorVelocidad = 1;
+    public float multiplicadorVelocidad = 4;
 
     Rigidbody2D rb;
     SpriteRenderer sr;
 
-    public float multiplicadorSalto = 1;
+    public float multiplicadorSalto = 5;
+
+    bool puedoSaltar;
 
     // Start is called before the first frame update
     void Start()
@@ -38,14 +41,26 @@ public class MovPersonaje : MonoBehaviour
           if (Input.GetKeyDown(KeyCode.D)){
                 sr.flipX = false;
          }
+        
+        //Rayo
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, 0.4f);
+
+        if(hit){
+            Debug.DrawRay(transform.position, Vector2.down, Color.magenta);
+            if (hit.collider.name == "Grid" || hit.collider.name == "Square"){
+            puedoSaltar = true;
+        }else{
+            puedoSaltar = false;
+        }
+
+
         //SALTO
-        if (Input.GetKeyDown(KeyCode.Space)){
+        if (Input.GetKeyDown(KeyCode.Space) && puedoSaltar==true){
             rb.AddForce(new Vector2(0,multiplicadorSalto), ForceMode2D.Impulse);
             Debug.Log("Salto");
         }
-
         
-
-
+       
+    }
     }
 }

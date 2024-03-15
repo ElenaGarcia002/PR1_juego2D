@@ -12,6 +12,8 @@ public class MovPersonaje : MonoBehaviour
     Rigidbody2D rb;
     SpriteRenderer sr;
 
+    Animator animatorController;
+
     public float multiplicadorSalto = 5;
 
     bool puedoSaltar;
@@ -21,6 +23,7 @@ public class MovPersonaje : MonoBehaviour
     {
         rb = this.GetComponent<Rigidbody2D>();
         sr = this.GetComponent<SpriteRenderer>();
+        animatorController = this.GetComponent<Animator>();
 
     }
 
@@ -33,15 +36,20 @@ public class MovPersonaje : MonoBehaviour
 
         transform.Translate(mov, 0, 0);
 
-
-         if (Input.GetKeyDown(KeyCode.A)){
+        //Flip personaje <-
+         if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow)){
                 sr.flipX = true;
+                animatorController.SetBool("activaCamina", true);
          }
-
+        //Flip personaje >-
           if (Input.GetKeyDown(KeyCode.D)){
                 sr.flipX = false;
+                animatorController.SetBool("activaCamina", true);
          }
-        
+        //quieto
+         if (Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.D)){
+            animatorController.SetBool("activaCamina", false);
+         }
         //Rayo
         RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, 0.4f);
 

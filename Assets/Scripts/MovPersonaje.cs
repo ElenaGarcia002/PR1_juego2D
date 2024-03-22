@@ -5,7 +5,8 @@ using UnityEngine;
 using UnityEngine.UIElements;
 
 public class MovPersonaje : MonoBehaviour
-{
+{   
+    public GameObject respawn;
 
     public float multiplicadorVelocidad = 4;
 
@@ -20,7 +21,9 @@ public class MovPersonaje : MonoBehaviour
 
     // Start is called before the first frame update
     void Start()
-    {
+    {   
+        transform.position = respawn.transform.position;
+
         rb = this.GetComponent<Rigidbody2D>();
         sr = this.GetComponent<SpriteRenderer>();
         animatorController = this.GetComponent<Animator>();
@@ -71,4 +74,9 @@ public class MovPersonaje : MonoBehaviour
        
     }
     }
+
+
+        public void GoToRespawn(){
+            transform.position = respawn.transform.position;
+        }
 }

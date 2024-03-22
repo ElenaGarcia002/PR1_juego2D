@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using JetBrains.Annotations;
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -9,6 +10,8 @@ public class MovPersonaje : MonoBehaviour
     public GameObject respawn;
 
     public float multiplicadorVelocidad = 4;
+
+    public GameObject fuego;
 
     Rigidbody2D rb;
     SpriteRenderer sr;
@@ -22,7 +25,7 @@ public class MovPersonaje : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {   
-        transform.position = respawn.transform.position;
+       //transform.position = respawn.transform.position;
 
         rb = this.GetComponent<Rigidbody2D>();
         sr = this.GetComponent<SpriteRenderer>();
@@ -70,9 +73,16 @@ public class MovPersonaje : MonoBehaviour
             rb.AddForce(new Vector2(0,multiplicadorSalto), ForceMode2D.Impulse);
             Debug.Log("Salto");
         }
+
+       
         
        
     }
+
+     if(Input.GetMouseButtonDown(0)){
+            //moviditas
+            Instantiate(fuego, transform.position, quaternion.identity);
+        }
     }
 
 

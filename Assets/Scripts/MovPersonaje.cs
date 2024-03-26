@@ -13,6 +13,8 @@ public class MovPersonaje : MonoBehaviour
 
     public GameObject fuego;
 
+
+
     Rigidbody2D rb;
     SpriteRenderer sr;
 
@@ -21,6 +23,8 @@ public class MovPersonaje : MonoBehaviour
     public float multiplicadorSalto = 5;
 
     bool puedoSaltar;
+
+    public bool miraDerecha = true;
 
     // Start is called before the first frame update
     void Start()
@@ -46,11 +50,13 @@ public class MovPersonaje : MonoBehaviour
          if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow)){
                 sr.flipX = true;
                 animatorController.SetBool("activaCamina", true);
+                miraDerecha = false;
          }
         //Flip personaje >-
           if (Input.GetKeyDown(KeyCode.D)){
                 sr.flipX = false;
                 animatorController.SetBool("activaCamina", true);
+                miraDerecha = true;
          }
         //quieto
          if (Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.D)){

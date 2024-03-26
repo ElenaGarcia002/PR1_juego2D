@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7978471232087217507}
   - component: {fileID: 4306368628174603377}
   - component: {fileID: 2697408645623371612}
+  - component: {fileID: 2045381914206803694}
   m_Layer: 0
   m_Name: fuego
   m_TagString: Untagged
@@ -101,3 +102,16 @@ CircleCollider2D:
   m_Offset: {x: 0.017239593, y: -0.043098878}
   serializedVersion: 2
   m_Radius: 0.51932365
+--- !u!114 &2045381914206803694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6149445903637565875}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31f093b4f2b74fe48bfa306dd3d74689, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speedBala: 3

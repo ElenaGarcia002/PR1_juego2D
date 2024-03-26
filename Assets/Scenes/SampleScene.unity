@@ -2482,7 +2482,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ac2d41f1b6937f48a4d20d856f5f7e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parallaxSpeed: 1
+  parallaxSpeed: 6
 --- !u!483693784 &1175463121
 TilemapRenderer:
   m_ObjectHideFlags: 0

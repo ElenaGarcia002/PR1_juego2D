@@ -1374,7 +1374,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 4.3756175
+  orthographic size: 5
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1398,7 +1398,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.2568092, y: 1.38, z: -10}
+  m_LocalPosition: {x: -5.88, y: 4.961401, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1412,7 +1412,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 72ece51f2901e7445ab60da3685d6b5f, type: 3}
   m_Name: 
@@ -1742,7 +1742,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 810791579}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.2568092, y: 1.4785992, z: -10}
+  m_LocalPosition: {x: -5.88, y: 4.961401, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1796,6 +1796,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ac2d41f1b6937f48a4d20d856f5f7e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  parallaxSpeed: 1
 --- !u!483693784 &821839155
 TilemapRenderer:
   m_ObjectHideFlags: 0
@@ -1836,7 +1837,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -15
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0.91999996, y: 0.28500003, z: 0}
   m_MaxChunkCount: 16
@@ -2481,6 +2482,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ac2d41f1b6937f48a4d20d856f5f7e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  parallaxSpeed: 1
 --- !u!483693784 &1175463121
 TilemapRenderer:
   m_ObjectHideFlags: 0
@@ -2521,7 +2523,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -19
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0.53999996, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -2708,6 +2710,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ac2d41f1b6937f48a4d20d856f5f7e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  parallaxSpeed: 1
 --- !u!483693784 &1425878823
 TilemapRenderer:
   m_ObjectHideFlags: 0
@@ -2748,7 +2751,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -12
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 1.14, y: 0.35000002, z: 0}
   m_MaxChunkCount: 16
@@ -2975,8 +2978,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1633479237}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.35, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 5.35, y: -0.3, z: 0}
+  m_LocalScale: {x: 1, y: 1.2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1699216793}

@@ -22,7 +22,7 @@ public class Parafax : MonoBehaviour
 
        transform.position = new Vector3(Camera.main.transform.position.x*parallaxSpeed,//x
                                         Camera.main.transform.position.y*parallaxSpeed,//y
-                                        0//
+                                        0
                                         );
        // transform.position = new Vector3(Camera.main.transform.position.x/paralaxSpeed, Camera.main.transformmposition,y/paralaxSpeed, 0) 
     }
